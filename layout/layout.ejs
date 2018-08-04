@@ -8,21 +8,9 @@ if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
 %>
-
-<!DOCTYPE html>
-<html lang="<%=config.language%>">
-<head>
-  <meta charset="UTF-8">
-  <title><%=pageTitle%></title>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <!-- stylesheets list from config.yml -->
-    <% theme.stylesheets.forEach(function(url) { %>
-      <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
-  <% } %>
-</head>
+<%-partial('partials/head') %>
 <body>
-
+<%- partial('partials/header') %>
 <div id="menu-outer">
   <div id="menu-inner">
     <% Object.keys(theme.menu).forEach(function(key) { %>

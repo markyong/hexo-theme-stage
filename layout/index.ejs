@@ -1,3 +1,5 @@
 
-<%-partial('partials/recent-posts')%>
-<%-paginator()%>
+<%- partial('partials/recent-posts') %>
+<nav id="pagination">
+  <%- paginator({prev_text: '&laquo; prev', next_text: 'next &raquo;'}) %>
+</nav>

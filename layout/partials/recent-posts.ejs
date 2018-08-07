@@ -2,21 +2,16 @@
   <div id="recent-posts">
     <% page.posts.sort('date', -1).limit(10).each(function (post) { %>
       <div class="post-item">
-        <div class="post-img"></div>
-        <div class="post-content">
           <h3>
-            <a href="<%= config.root + post.path %>"><%= post.title %></a>
+            <a href="<%= config.root + post.path %>">
+              <% if (post.date) {%>
+              <time datetime="<%= post.date.toJSON() %>">
+                <%=date(post.date)%>
+              </time>
+              <% } %>
+              <%- truncate(strip_html(post.title), {length: 57, omission: '...'}) %>
+            </a>
           </h3>
-          <% if (post.date) {%>
-          <time datetime="<%= post.date.toJSON() %>">
-            <%=date(post.date)%>
-          </time>
-          <% } %>
-          <p>
-            <%- truncate(strip_html(post.content), {length: 170, omission: '...'}) %>
-          </p>
-          <a href="<%= config.root + post.path %>">阅读全部</a>
-        </div>
       </div>
     <% }) %>
   </div>

@@ -1,0 +1,11 @@
+<%
+  var categoriesList = list_categories({ show_count: false })
+%>
+<aside id="categories">
+  <h2>分类</h2>
+  <% if (categoriesList) { %>
+    <%-categoriesList%>
+  <% } else { %>
+    <p>None.</p>
+  <% } %>
+</aside>

@@ -1,5 +1,8 @@
-
 <%- partial('partials/recent-posts') %>
+<div id="page-left-content">
+  <%- partial('partials/categories') %>
+  <%- partial('partials/archives') %>
+</div>
 <nav id="pagination">
   <%- paginator({prev_text: '&laquo; prev', next_text: 'next &raquo;'}) %>
 </nav>

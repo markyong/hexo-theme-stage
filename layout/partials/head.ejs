@@ -1,5 +1,6 @@
 <%
   var pageTitle = page.title || config.subtitle || ''
+  if (is_home()) pageTitle = ''
   if (is_archive()) pageTitle = 'Archives'
   if (is_tag()) pageTitle = 'Tag: ' + page.tag
   if (is_category()) pageTitle = 'Category: ' + page.category

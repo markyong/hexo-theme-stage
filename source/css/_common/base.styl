@@ -48,3 +48,10 @@ menu
   box-sizing border-box
 body
   background #F0F0F0
+.clearfix::before,
+.clearfix::after
+  content: ''
+  height: 0
+  display: block
+  visibility: hidden
+  clear: both

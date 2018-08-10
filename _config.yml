@@ -18,4 +18,5 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
+- /js/waterrippleeffect.min.js
 - /js/stage.js

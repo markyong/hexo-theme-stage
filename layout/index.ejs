@@ -1,9 +1,6 @@
 <div class="clearfix">
   <%- partial('partials/recent-posts') %>
-  <div id="page-left-content">
-    <%- partial('partials/categories') %>
-    <%- partial('partials/archives') %>
-  </div>
+  <%- partial('partials/content-aside') %>
 </div>
 <nav id="pagination" class="clearfix">
   <%- paginator({prev_text: '&laquo; prev', next_text: 'next &raquo;'}) %>

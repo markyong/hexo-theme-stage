@@ -1,7 +1,7 @@
 // header
 function initWater () {
   var settings = {
-    image: '../images/default-header.jpg',
+    image: '/images/default-header.jpg',
     rippleRadius: 2,
     width: 1000,
     height: 300,

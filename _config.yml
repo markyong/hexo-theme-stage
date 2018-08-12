@@ -13,11 +13,16 @@ menu:
 # Miscelaneous
 favicon: /favicon.ico
 
+# avatar
+avatar: /images/avatar.jpg
+
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/stage.css
+- /css/avatar-bg.css
 
 # scripts loaded in the end of the body
 scripts:
 - /js/waterrippleeffect.min.js
+- /js/cav.js
 - /js/stage.js

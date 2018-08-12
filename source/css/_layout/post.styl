@@ -24,13 +24,30 @@
     display block
 #article-nav
   height 70px
+  font-size 14px
   a {
     color: #777
     &:hover {
       color #222
     }
   }
+  position relative
 #article-nav-newer
   float right
+  width 50%
+  box-sizing border-box
+  padding-right: 14px
+  text-align right
+  .article-nav-caption
+    position absolute
+    right 0
+    top 0
 #article-nav-older
   float: left
+  width 50%
+  box-sizing border-box
+  padding-left: 14px
+  .article-nav-caption
+    position absolute
+    left 0
+    top 0

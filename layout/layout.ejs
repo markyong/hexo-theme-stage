@@ -1,13 +1,6 @@
 <%-partial('partials/head') %>
 <body>
 <%- partial('partials/header') %>
-<div id="menu-outer">
-  <div id="menu-inner">
-    <% Object.keys(theme.menu).forEach(function(key) { %>
-      <a href="<%=theme.menu[key]%>"><%=key%></a>
-    <% }); %>
-  </div>
-</div>
 <div id="content-outer">
   <div id="content-inner">
     <%- body %>

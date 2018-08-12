@@ -21,4 +21,11 @@
     </div>
     <a href="/"><img class="avatar" src="<%= theme.avatar %>" alt=""></a>
     <a href="/"><h3 class="author"><%= config.author %></h3></a>
+    <div class="social">
+        <% for (var key in theme.social ) {%>
+            <% if (theme.social[key]){%>
+              <a href="<%- url_for(theme.social[key]) %>" title="<%= key %>" class="fa fa-<%= key %>"></a>
+            <% } %>
+        <% } %>
+    </div>
 </div>

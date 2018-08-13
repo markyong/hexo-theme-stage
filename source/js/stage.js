@@ -175,6 +175,52 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
   }
   C();
 }
+
+inView.offset(27)
+var isDown = true
+var oldY = 0
+window.onscroll = function () {
+  var currentY = window.scrollY
+  if((oldY - currentY) < 0) {
+    isDown = true
+  } else {
+    isDown = false
+  }
+  oldY = currentY
+}
+
+$('.toc-link').each(function() {
+  var href = $(this).attr("href");
+
+  inView(href).on('exit', () => {
+    if (isDown) {
+      handleActive(href)
+    }
+  })
+
+  inView(href).on('enter', () => {
+    if (!isDown) {
+    handleActive(href)
+  }
+})
+
+  this.onclick = function(e) {
+    var pos = $(href).offset().top - 7;
+    $("html,body").animate({scrollTop: pos}, 300);
+    setTimeout(() => {
+      handleActive(href)
+    }, 350)
+    return false
+  }
+})
+
+function handleActive(href) {
+  document.querySelectorAll('.toc-link').forEach(el => {
+    el.classList.remove('active')
+})
+  document.querySelector(".toc [href='"+ href +"']").classList.add('active')
+}
+
 window.onload = function () {
   initWater()
   backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')

@@ -1,7 +1,9 @@
 #post
   width $stage-page-width
-  background rgba(255, 255, 255, 0.7)
+  background #fff
+  float left
   padding 27px
+  position relative
   .bottom-line
     width 100%
     border 1px dashed #ccc
@@ -51,3 +53,21 @@
     position absolute
     left 0
     top 0
+#toc
+  width $stage-aside-width
+  float right
+  background #fff
+  position sticky
+  padding 10px 10px 17px 10px
+  top 7px
+  h2
+    font-size 17px
+  ol
+    padding 4px
+    font-size 14px
+    li
+      padding 3px 0
+      ol
+        padding-left 10px
+  .active
+    color: #41b883

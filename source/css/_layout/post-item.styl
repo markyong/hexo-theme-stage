@@ -1,24 +1,98 @@
 #recent-posts
   width $stage-page-width
   background #fff
-  padding 7px
-  box-shadow 0px 0px 10px rgba(0, 0, 0, 0.1)
+  padding 7px 0
   border-radius 1px
   margin-bottom 37px
   float left
 .post-item
-  height 77px
-  line-height 77px
+  border-bottom 1px dashed #ccc
+  font-size 14px
+  padding 17px 0
+  img
+    display block
+    max-width 100%
+    margin 7px auto
   &:last-child {
     margin-bottom 37px
   }
   h3
-    border-bottom 1px dashed #ccc
+    font-size 21px
+    padding-bottom 14px
+    font-weight 500
     a:hover {
       color: #41b883
     }
-    time
-      padding 0 17px 0 7px
+  time
+    margin-bottom 14px
+    display inline-block
+  p
+    line-height 2
+  .tags-category-list
+    padding-left 18px
+    font-size 12px
+    margin 14px 0
+  .tags-category-list-item
+    display inline-block
+    padding 2px 3px
+    background #f1f8ff
+    margin-right 24px
+    position relative
+    a
+      color #000
+      &:hover
+        color #41b883
+  .tags-category-list li:nth-child(even)
+    &::before
+      content: ''
+      display inline-block
+      border-right 20px solid #f1f8ff
+      border-bottom 20px solid rgba(0, 0, 0, 0)
+      position absolute
+      left -20px
+      top: 0px
+    &::after
+      content: ''
+      display inline-block
+      border-right 20px solid rgba(0, 0, 0, 0)
+      border-top 20px solid #f1f8ff
+      position absolute
+      right  -20px
+      top: 0px
+  .tags-category-list li:nth-child(odd)
+    &::before
+      content: ''
+      display inline-block
+      border-right 20px solid #f1f8ff
+      border-top 20px solid rgba(0, 0, 0, 0)
+      position absolute
+      left -20px
+      top: 0px
+    &::after
+      content: ''
+      display inline-block
+      border-right 20px solid rgba(0, 0, 0, 0)
+      border-bottom 20px solid #f1f8ff
+      position absolute
+      right  -20px
+      top: 0px
+  .article-category-list
+    display inline-block
+    padding-left 17px
+    position relative
+    margin-right 17px
+    a:hover
+      color #41b883
+    &::before
+      display inline-block
+      content: ''
+      width 11px
+      height 11px
+      background #41b883
+      border-radius 50%
+      position absolute
+      left 0px
+      top 5px
 //.post-content
 //  width 51%
 //  padding 20px

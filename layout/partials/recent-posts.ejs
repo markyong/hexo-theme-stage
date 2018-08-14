@@ -3,15 +3,41 @@
     <% page.posts.sort('date', -1).limit(10).each(function (post) { %>
       <div class="post-item">
           <h3>
-            <% if (post.date) {%>
-            <time datetime="<%= post.date.toJSON() %>">
-              <%=date(post.date)%>
-            </time>
-            <% } %>
             <a href="<%= config.root + post.path %>">
               <%- truncate(strip_html(post.title), {length: 57, omission: '...'}) %>
             </a>
           </h3>
+        <p>
+          <span>创建于</span>
+          <% if (post.date) {%>
+          <time datetime="<%= post.date.toJSON() %>">
+            <%=date(post.date)%>
+          </time>
+          <% } %>
+        </p>
+        <% if(post.excerpt) { %>
+          <%- post.excerpt %>
+        <% } else { %>
+          <%- post.content %>
+        <% }%>
+        <p>
+          <%- list_tags(post.tags, {
+            show_count: false,
+            class: 'tags-category'
+          }) %>
+        </p>
+        <%- list_categories(post.categories, {
+          show_count: false,
+          class: 'article-category'
+        }) %>
+        <span>
+          最后更新于
+          <% if (post.updated) {%>
+          <time datetime="<%= post.updated.toJSON() %>">
+            <%=date(post.updated)%>
+          </time>
+          <% } %>
+        </span>
       </div>
     <% }) %>
   </div>

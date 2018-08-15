@@ -2,28 +2,39 @@
   width $stage-page-width
   background #fff
   float left
-  padding 27px
+  padding 0 27px
   position relative
   .bottom-line
     width 100%
     border 1px dashed #ccc
     margin 17px 0
-  h1
-    padding 10px
-    font-size 22px
-    font-weight 700
-  h1:first-child
-    font-weight 400
+  h1, h2
+    border-bottom 1px solid #eaecef
+    font-weight 600
+    padding 7px 0
     margin-bottom 17px
-    text-align center
+  h1
+    font-size 27px
+  h2
+    font-size 24px
+  h1:first-child
+    border: 0 none
+    margin-bottom 17px
+    line-height 1.7
+  h3, h4, h5, h6
+    font-size 20px
   p
-    padding-bottom 27px
-    font-size 14px
     line-height 2
   img
     max-width 100%
     margin 7px auto
     display block
+  ul
+    list-style circle
+    padding-left 42px
+    li
+      line-height 1.7
+
 #article-nav
   height 70px
   font-size 14px
@@ -62,6 +73,7 @@
   top 7px
   h2
     font-size 17px
+    font-weight 600
   ol
     padding 4px
     font-size 14px

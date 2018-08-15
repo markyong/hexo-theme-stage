@@ -1,14 +1,13 @@
 #recent-posts
   width $stage-page-width
   background #fff
-  padding 7px 0
   border-radius 1px
   margin-bottom 37px
   float left
 .post-item
   border-bottom 1px dashed #ccc
-  font-size 14px
   padding 17px 0
+  margin 0 17px
   img
     display block
     max-width 100%
@@ -16,22 +15,38 @@
   &:last-child {
     margin-bottom 37px
   }
+  .create
+    padding-bottom 7px
+    time
+      padding-right 17px
+  .readmore
+    margin-left 7px
+    font-weight 600
+    &:hover
+      color #41b883
   h3
-    font-size 21px
+    font-size 27px
     padding-bottom 14px
-    font-weight 500
+    font-weight 600
     a:hover {
       color: #41b883
     }
   time
-    margin-bottom 14px
     display inline-block
   p
     line-height 2
+  ul
+    list-style circle
+    padding-left 42px
+    li
+      line-height 1.7
   .tags-category-list
     padding-left 18px
     font-size 12px
     margin 14px 0
+    li
+      list-style none
+      padding 0
   .tags-category-list-item
     display inline-block
     padding 2px 3px
@@ -76,6 +91,9 @@
       position absolute
       right  -20px
       top: 0px
+  .article-category-list li
+    list-style none
+    padding 0
   .article-category-list
     display inline-block
     padding-left 17px
@@ -92,7 +110,7 @@
       border-radius 50%
       position absolute
       left 0px
-      top 5px
+      top 7px
 //.post-content
 //  width 51%
 //  padding 20px

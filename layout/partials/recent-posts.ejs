@@ -7,14 +7,18 @@
               <%- truncate(strip_html(post.title), {length: 57, omission: '...'}) %>
             </a>
           </h3>
-        <p>
-          <span>创建于</span>
-          <% if (post.date) {%>
-          <time datetime="<%= post.date.toJSON() %>">
-            <%=date(post.date)%>
-          </time>
-          <% } %>
-        </p>
+          <div class="create">
+              <span>创建于</span>
+              <% if (post.date) {%>
+              <time datetime="<%= post.date.toJSON() %>">
+                  <%=date(post.date)%>
+              </time>
+              <% } %>
+              <%- list_categories(post.categories, {
+                  show_count: false,
+                  class: 'article-category'
+              }) %>
+          </div>
         <% if(post.excerpt) { %>
           <%- post.excerpt %>
         <% } else { %>
@@ -26,18 +30,9 @@
             class: 'tags-category'
           }) %>
         </p>
-        <%- list_categories(post.categories, {
-          show_count: false,
-          class: 'article-category'
-        }) %>
-        <span>
-          最后更新于
-          <% if (post.updated) {%>
-          <time datetime="<%= post.updated.toJSON() %>">
-            <%=date(post.updated)%>
-          </time>
-          <% } %>
-        </span>
+          <a class="readmore" href="<%= config.root + post.path %>">
+            阅读更多
+          </a>
       </div>
     <% }) %>
   </div>

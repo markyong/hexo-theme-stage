@@ -1,158 +1,162 @@
+$highlight-background = #f8f8f8
+$highlight-language = #ccc
+$highlight-pre = #525252
+
 .highlight {
-  position: relative;
-  margin: 1em 0;
-  border-radius: 2px;
-  line-height: 1.1em;
-  background-color: #f8f8f8;
-  overflow-x: auto
+  position relative
+  margin 1em 0
+  border-radius 2px
+  line-height 1.1em
+  background-color $highlight-background
+  overflow-x auto
   font-size 13px
 }
 
 .highlight table,figure.highlight tr,figure.highlight td {
-  width: 100%;
-  border-collapse: collapse;
-  padding: 0;
-  margin: 0
+  width 100%
+  border-collapse collapse
+  padding 0
+  margin 0
 }
 
 .highlight .gutter {
-  display: none
+  display none
 }
 
 .highlight .code pre {
-  padding: 1.2em 1.4em;
-  line-height: 1.5em;
-  margin: 0
+  padding 1.2em 1.4em
+  line-height 1.5em
+  margin 0
   font-family "Roboto Mono", Monaco, courier, monospace
 }
 
-.highlight.html .code:after,figure.highlight.js .code:after,figure.highlight.bash .code:after,figure.highlight.css .code:after,figure.highlight.scss .code:after,figure.highlight.diff .code:after,figure.highlight.java .code:after,figure.highlight.xml .code:after,figure.highlight.python .code:after,figure.highlight.json .code:after,figure.highlight.swift .code:after,figure.highlight.ruby .code:after,figure.highlight.perl .code:after,figure.highlight.php .code:after,figure.highlight.c .code:after,figure.highlight.cpp .code:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #ccc;
-  text-align: right;
-  font-size: 0.75em;
-  padding: 5px 10px 0;
-  line-height: 15px;
-  height: 15px;
-  font-weight: 600
+.highlight.html .codeafter,figure.highlight.js .codeafter,figure.highlight.bash .codeafter,figure.highlight.css .codeafter,figure.highlight.scss .codeafter,figure.highlight.diff .codeafter,figure.highlight.java .codeafter,figure.highlight.xml .codeafter,figure.highlight.python .codeafter,figure.highlight.json .codeafter,figure.highlight.swift .codeafter,figure.highlight.ruby .codeafter,figure.highlight.perl .codeafter,figure.highlight.php .codeafter,figure.highlight.c .codeafter,figure.highlight.cpp .codeafter {
+  position absolute
+  top 0
+  right 0
+  color $highlight-language
+  text-align right
+  font-size 0.75em
+  padding 5px 10px 0
+  line-height 15px
+  height 15px
+  font-weight 600
 }
 
-.highlight.html .code:after {
-  content: "HTML"
+.highlight.html .codeafter {
+  content "HTML"
 }
 
-.highlight.js .code:after {
-  content: "JS"
+.highlight.js .codeafter {
+  content "JS"
 }
 
-.highlight.bash .code:after {
-  content: "BASH"
+.highlight.bash .codeafter {
+  content "BASH"
 }
 
-.highlight.css .code:after {
-  content: "CSS"
+.highlight.css .codeafter {
+  content "CSS"
 }
 
-.highlight.scss .code:after {
-  content: "SCSS"
+.highlight.scss .codeafter {
+  content "SCSS"
 }
 
-.highlight.diff .code:after {
-  content: "DIFF"
+.highlight.diff .codeafter {
+  content "DIFF"
 }
 
-.highlight.java .code:after {
-  content: "JAVA"
+.highlight.java .codeafter {
+  content "JAVA"
 }
 
-.highlight.xml .code:after {
-  content: "XML"
+.highlight.xml .codeafter {
+  content "XML"
 }
 
-.highlight.python .code:after {
-  content: "PYTHON"
+.highlight.python .codeafter {
+  content "PYTHON"
 }
 
-.highlight.json .code:after {
-  content: "JSON"
+.highlight.json .codeafter {
+  content "JSON"
 }
 
-.highlight.swift .code:after {
-  content: "SWIFT"
+.highlight.swift .codeafter {
+  content "SWIFT"
 }
 
-.highlight.ruby .code:after {
-  content: "RUBY"
+.highlight.ruby .codeafter {
+  content "RUBY"
 }
 
-.highlight.perl .code:after {
-  content: "PERL"
+.highlight.perl .codeafter {
+  content "PERL"
 }
 
-.highlight.php .code:after {
-  content: "PHP"
+.highlight.php .codeafter {
+  content "PHP"
 }
 
-.highlight.c .code:after {
-  content: "C"
+.highlight.c .codeafter {
+  content "C"
 }
 
-.highlight.java .code:after {
-  content: "JAVA"
+.highlight.java .codeafter {
+  content "JAVA"
 }
 
-.highlight.cpp .code:after {
-  content: "CPP"
+.highlight.cpp .codeafter {
+  content "CPP"
 }
 
-.highlight.cpp .code:after {
-  content: 'C++'
+.highlight.cpp .codeafter {
+  content 'C++'
 }
 
 pre {
-  color: #525252
+  color $highlight-pre
 }
 
 pre .function .keyword,pre .constant {
-  color: #0092db
+  color #0092db
 }
 
 pre .keyword,pre .attribute {
-  color: #e96900
+  color #e96900
 }
 
 pre .number,pre .literal {
-  color: #ae81ff
+  color #ae81ff
 }
 
 pre .tag,pre .tag .title,pre .change,pre .winutils,pre .flow,pre .lisp .title,pre .clojure .built_in,pre .nginx .title,pre .tex .special {
-  color: #2973b7
+  color #2973b7
 }
 
 pre .symbol,pre .symbol .string,pre .value,pre .regexp {
-  color: #42b983
+  color #42b983
 }
 
 pre .title {
-  color: #83B917
+  color #83B917
 }
 
 pre .tag .value,pre .string,pre .subst,pre .haskell .type,pre .preprocessor,pre .ruby .class .parent,pre .built_in,pre .sql .aggregate,pre .django .template_tag,pre .django .variable,pre .smalltalk .class,pre .javadoc,pre .django .filter .argument,pre .smalltalk .localvars,pre .smalltalk .array,pre .attr_selector,pre .pseudo,pre .addition,pre .stream,pre .envvar,pre .apache .tag,pre .apache .cbracket,pre .tex .command,pre .prompt {
-  color: #42b983
+  color #42b983
 }
 
 pre .comment,pre .java .annotation,pre .python .decorator,pre .template_comment,pre .pi,pre .doctype,pre .shebang,pre .apache .sqbracket,pre .tex .formula {
-  color: #b3b3b3
+  color #b3b3b3
 }
 
 pre .deletion {
-  color: #BA4545
+  color #BA4545
 }
 
 pre .coffeescript .javascript,pre .javascript .xml,pre .tex .formula,pre .xml .javascript,pre .xml .vbscript,pre .xml .css,pre .xml .cdata {
-  opacity: 0.5
+  opacity 0.5
 }
 code {
   background #f8f8f8

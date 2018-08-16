@@ -4,6 +4,30 @@
   float left
   padding 0 27px
   position relative
+  .create
+    padding 0 0 17px 4px
+    time
+      padding-right 17px
+  .article-category-list li
+    list-style none
+    padding 0
+  .article-category-list
+    display inline-block
+    padding-left 17px
+    position relative
+    margin-right 17px
+    a:hover
+      color #41b883
+    &::before
+      display inline-block
+      content: ''
+      width 11px
+      height 11px
+      background #41b883
+      border-radius 50%
+      position absolute
+      left 0px
+      top 7px  
   .bottom-line
     width 100%
     border 1px dashed #ccc
@@ -19,7 +43,8 @@
     font-size 24px
   h1:first-child
     border: 0 none
-    margin-bottom 17px
+    margin-bottom 0px
+    padding-bottom 1px
     line-height 1.7
   h3, h4, h5, h6
     font-size 20px
@@ -34,7 +59,57 @@
     padding-left 42px
     li
       line-height 1.7
-
+  .tags-category-list
+    padding-left 27px
+    font-size 12px
+    margin 27px 0
+    li
+      list-style none
+      padding 0
+  .tags-category-list-item
+    display inline-block
+    padding 2px 3px
+    background #f1f8ff
+    margin-right 24px
+    position relative
+    a
+      color #000
+      &:hover
+        color #41b883
+  .tags-category-list li:nth-child(even)
+    &::before
+      content: ''
+      display inline-block
+      border-right 20px solid #f1f8ff
+      border-bottom 20px solid rgba(0, 0, 0, 0)
+      position absolute
+      left -20px
+      top: 0px
+    &::after
+      content: ''
+      display inline-block
+      border-right 20px solid rgba(0, 0, 0, 0)
+      border-top 20px solid #f1f8ff
+      position absolute
+      right  -20px
+      top: 0px
+  .tags-category-list li:nth-child(odd)
+    &::before
+      content: ''
+      display inline-block
+      border-right 20px solid #f1f8ff
+      border-top 20px solid rgba(0, 0, 0, 0)
+      position absolute
+      left -20px
+      top: 0px
+    &::after
+      content: ''
+      display inline-block
+      border-right 20px solid rgba(0, 0, 0, 0)
+      border-bottom 20px solid #f1f8ff
+      position absolute
+      right  -20px
+      top: 0px
 #article-nav
   height 70px
   font-size 14px

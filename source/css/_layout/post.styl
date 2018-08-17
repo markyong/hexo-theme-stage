@@ -2,7 +2,8 @@
   width $stage-page-width
   background #fff
   float left
-  padding 0 27px
+  padding-right 17px
+  padding-left 1px
   position relative
   .create
     padding 0 0 17px 4px
@@ -50,12 +51,35 @@
     font-size 20px
   p
     line-height 2
+  table
+    border-collapse collapse
+    margin 17px 0
+    font-size 14px
+    tbody tr
+      transition background-color 0.4s
+      &:hover
+        background-color  #eaecef
+    tr th
+      border 1px solid #ccc
+      font-size 15px
+      padding 14px 7px
+      font-weight 600
+      line-height 2
+    tr td
+      border 1px solid #ccc
+      padding 14px 7px
+      line-height 2
   img
     max-width 100%
     margin 7px auto
     display block
   ul
     list-style circle
+    padding-left 42px
+    li
+      line-height 1.7
+  ol
+    list-style decimal
     padding-left 42px
     li
       line-height 1.7

@@ -7,7 +7,8 @@
 .post-item
   border-bottom 1px dashed #ccc
   padding 17px 0
-  margin 0 17px
+  margin-right 17px
+  margin-left 1px
   img
     display block
     max-width 100%
@@ -36,11 +37,34 @@
     display inline-block
   p
     line-height 2
+  table
+    border-collapse collapse
+    margin 17px 0
+  font-size 14px
+  tbody tr
+    transition background-color 0.4s
+    &:hover
+      background-color  #eaecef
+  tr th
+    border 1px solid #ccc
+    font-size 15px
+    padding 14px 7px
+    font-weight 600
+    line-height 2
+  tr td
+    border 1px solid #ccc
+    padding 14px 7px
+    line-height 2
   ul
     list-style circle
     padding-left 42px
     li
       line-height 1.7
+  ol
+    list-style decimal
+    padding-left 42px
+  li
+    line-height 1.7
   .tags-category-list
     padding-left 18px
     font-size 12px

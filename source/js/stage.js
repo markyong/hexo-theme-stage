@@ -175,6 +175,12 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
   }
   C();
 }
+// header, avatar 背景
+initWater()
+backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')
+backgroundShaking('container_right', 'canvas_right', '#1BB980', '#41b883')
+
+// 文章anchor
 var isDown = true,
     oldY = 0,
     timer = 0,
@@ -234,10 +240,4 @@ function handleActive(href) {
     el.classList.remove('active')
 })
   document.querySelector(".toc [href='"+ href +"']").classList.add('active')
-}
-
-window.onload = function () {
-  initWater()
-  backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')
-  backgroundShaking('container_right', 'canvas_right', '#1BB980', '#41b883')
 }

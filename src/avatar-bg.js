@@ -1,26 +1,3 @@
-// header
-function initWater () {
-  var settings = {
-    image: '/images/default-header.jpg',
-    rippleRadius: 2,
-    width: 1000,
-    height: 300,
-    delay: 1,
-    auto: true
-  }
-  var navImg = document.getElementById('nav-img')
-  var waterRippleEffect = new WaterRippleEffect(navImg, settings)
-  navImg.addEventListener('click', function (e) {
-    var mouseX = e.layerX
-    var mouseY = e.layerY
-    waterRippleEffect.disturb(mouseX, mouseY)
-  })
-  navImg.addEventListener('mousemove', function (e) {
-    var mouseX = e.layerX
-    var mouseY = e.layerY
-    waterRippleEffect.disturb(mouseX, mouseY)
-  })
-}
 // avatar bg
 function backgroundShaking(container, canvas, ambient, diffuse) {
   var t = {width: 1.5,height: 1.5,depth: 10,segments: 10,slices: 7,xRange: 0.8,yRange: 0.1,zRange: 1,ambient: "#000000",diffuse: "#ffffff",speed: 0.0002};
@@ -158,9 +135,9 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
       }
     };
     return {set: function() {
-      P(S[0]);
-      R(S[1])
-    }}
+        P(S[0]);
+        R(S[1])
+      }}
   }
   function v() {
     window.addEventListener("resize", j)
@@ -175,68 +152,6 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
   }
   C();
 }
-// 文章anchor
-var isDown = true,
-    oldY = 0,
-    timer = 0,
-    bodyScrollTop = document.documentElement.scrollTop,
-    targetTop = 0
-window.onscroll = function () {
-  var currentY = window.scrollY
-  if((oldY - currentY) < 0) {
-    isDown = true
-  } else {
-    isDown = false
-  }
-  oldY = currentY
-  bodyScrollTop = currentY
-}
-inView.offset(47)
-document.querySelectorAll('.toc-link').forEach(function (val) {
-    var href = val.getAttribute('href')
-    inView(href).on('exit', () => {
-      if (isDown) {
-        handleActive(href)
-      }
-    })
-    inView(href).on('enter', () => {
-      if (!isDown) {
-      handleActive(href)
-      }
-    })
-    val.onclick = function () {
-        animate(href)
-        setTimeout(function () {
-          handleActive(href)
-        }, 370)
-        return false
-    }
-})
-
-// 缓动动画
-function animate (el) {
-  targetTop = document.querySelector(el).offsetTop + 450 + 47
-  clearInterval(timer)
-  timer = setInterval(function () {
-    var step = (targetTop - bodyScrollTop) / 11
-    step = step > 0 ? Math.ceil(step) : Math.floor(step)
-    bodyScrollTop = bodyScrollTop + step
-    window.scrollTo(0, bodyScrollTop)
-    if (Math.abs(targetTop - bodyScrollTop) <= Math.abs(step)) {
-      window.scrollTo(0, targetTop)
-      clearInterval(timer)
-    }
-  }, 17)
-}
-
-function handleActive(href) {
-  document.querySelectorAll('.toc-link').forEach(el => {
-    el.classList.remove('active')
-})
-  document.querySelector(".toc [href='"+ href +"']").classList.add('active')
-}
-
-// header, avatar 背景
-initWater()
+// avatar 背景
 backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')
 backgroundShaking('container_right', 'canvas_right', '#1BB980', '#41b883')

@@ -7,12 +7,13 @@
   </div>
 </div>
 <%- partial('partials/footer') %>
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(function(url) { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
-<% } %>
-
+<script src="/lib/js/waterrippleeffect.min.js"></script>
+<script src="/js/header-bg.main.js"></script>
+<% if (!is_post()) {%>
+  <script src="/lib/js/cav.js"></script>
+  <script src="/js/avatar-bg.main.js"></script>
+<%} else {%>
+  <script src="/js/toc.main.js"></script>
+<%}%>
 </body>
 </html>

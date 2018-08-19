@@ -4,7 +4,8 @@
   "description": "hexo theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/markyong/hexo-theme-stage/issues"
   },
-  "homepage": "https://github.com/markyong/hexo-theme-stage#readme"
+  "homepage": "https://github.com/markyong/hexo-theme-stage#readme",
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "gitment": "0.0.3",
+    "in-view": "^0.6.1"
+  }
 }

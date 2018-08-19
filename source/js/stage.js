@@ -175,10 +175,11 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
   }
   C();
 }
-
-inView.offset(27)
-var isDown = true
-var oldY = 0
+var isDown = true,
+    oldY = 0,
+    timer = 0,
+    bodyScrollTop = document.documentElement.scrollTop,
+    targetTop = 0
 window.onscroll = function () {
   var currentY = window.scrollY
   if((oldY - currentY) < 0) {
@@ -187,32 +188,46 @@ window.onscroll = function () {
     isDown = false
   }
   oldY = currentY
+  bodyScrollTop = currentY
 }
+inView.offset(47)
+document.querySelectorAll('.toc-link').forEach(function (val) {
+    var href = val.getAttribute('href')
+    inView(href).on('exit', () => {
+      if (isDown) {
+        handleActive(href)
+      }
+    })
 
-$('.toc-link').each(function() {
-  var href = $(this).attr("href");
-
-  inView(href).on('exit', () => {
-    if (isDown) {
+    inView(href).on('enter', () => {
+      if (!isDown) {
       handleActive(href)
+      }
+    })
+    val.onclick = function () {
+        animate(href)
+        setTimeout(function () {
+          handleActive(href)
+        }, 370)
+        return false
     }
-  })
-
-  inView(href).on('enter', () => {
-    if (!isDown) {
-    handleActive(href)
-  }
 })
 
-  this.onclick = function(e) {
-    var pos = $(href).offset().top - 7;
-    $("html,body").animate({scrollTop: pos}, 300);
-    setTimeout(() => {
-      handleActive(href)
-    }, 350)
-    return false
-  }
-})
+// 缓动动画
+function animate (el) {
+  targetTop = document.querySelector(el).offsetTop + 450 + 47
+  clearInterval(timer)
+  timer = setInterval(function () {
+    var step = (targetTop - bodyScrollTop) / 11
+    step = step > 0 ? Math.ceil(step) : Math.floor(step)
+    bodyScrollTop = bodyScrollTop + step
+    window.scrollTo(0, bodyScrollTop)
+    if (Math.abs(targetTop - bodyScrollTop) <= Math.abs(step)) {
+      window.scrollTo(0, targetTop)
+      clearInterval(timer)
+    }
+  }, 17)
+}
 
 function handleActive(href) {
   document.querySelectorAll('.toc-link').forEach(el => {

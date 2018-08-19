@@ -29,7 +29,6 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-- /lib/js/jquery.min.js
 - /lib/js/in-view.js
 - /js/waterrippleeffect.min.js
 - /js/cav.js

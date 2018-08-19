@@ -175,11 +175,6 @@ function backgroundShaking(container, canvas, ambient, diffuse) {
   }
   C();
 }
-// header, avatar 背景
-initWater()
-backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')
-backgroundShaking('container_right', 'canvas_right', '#1BB980', '#41b883')
-
 // 文章anchor
 var isDown = true,
     oldY = 0,
@@ -204,7 +199,6 @@ document.querySelectorAll('.toc-link').forEach(function (val) {
         handleActive(href)
       }
     })
-
     inView(href).on('enter', () => {
       if (!isDown) {
       handleActive(href)
@@ -241,3 +235,8 @@ function handleActive(href) {
 })
   document.querySelector(".toc [href='"+ href +"']").classList.add('active')
 }
+
+// header, avatar 背景
+initWater()
+backgroundShaking('container_left', 'canvas_left', '#42b983', '#137AB9')
+backgroundShaking('container_right', 'canvas_right', '#1BB980', '#41b883')

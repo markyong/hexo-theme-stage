@@ -25,10 +25,10 @@
   </article>
   <div id="toc">
     <% if(toc(page.content)) { %>
-      <h2>文章目录</h2>
+      <h2><%= __('toc')%></h2>
       <%- toc(page.content) %>
     <%} else {%>
-      <h2>没有目录...</h2>
+      <h2><%= __('tocEmpty')%></h2>
     <% } %>
   </div>
 </div>

@@ -2,7 +2,7 @@
 var acchivesList = list_archives({ show_count: false })
 %>
 <aside id="acchives">
-    <h2>归档</h2>
+    <h2><%= __('archives')%></h2>
     <% if (acchivesList) { %>
     <%-acchivesList%>
     <% } else { %>

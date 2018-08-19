@@ -8,7 +8,7 @@
             </a>
           </h3>
           <div class="create">
-              <span>创建于</span>
+              <span><%= __('created')%></span>
               <% if (post.date) {%>
               <time datetime="<%= post.date.toJSON() %>">
                   <%=date(post.date)%>
@@ -24,14 +24,12 @@
         <% } else { %>
           <%- post.content %>
         <% }%>
-        <p>
           <%- list_tags(post.tags, {
             show_count: false,
             class: 'tags-category'
           }) %>
-        </p>
           <a class="readmore" href="<%= config.root + post.path %>">
-            阅读更多
+            <%= __('readMore')%>
           </a>
       </div>
     <% }) %>

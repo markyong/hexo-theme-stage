@@ -39,10 +39,10 @@ document.querySelectorAll('.toc-link').forEach(function (val) {
 
 // 缓动动画
 function animate (el) {
-  targetTop = document.querySelector(el).offsetTop + 450 + 47
+  targetTop = document.querySelector(el).offsetTop + 450 + 40
   clearInterval(timer)
   timer = setInterval(function () {
-    var step = (targetTop - bodyScrollTop) / 11
+    var step = (targetTop - bodyScrollTop) / 17
     step = step > 0 ? Math.ceil(step) : Math.floor(step)
     bodyScrollTop = bodyScrollTop + step
     window.scrollTo(0, bodyScrollTop)

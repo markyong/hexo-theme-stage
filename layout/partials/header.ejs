@@ -1,9 +1,11 @@
 <header id="header">
   <div class="header-main">
     <h1><a href="/"><%= config.title %></a></h1>
-    <h4><%= config.subtitle %></h4>
   </div>
   <div id="nav">
     <div class="nav-img" id="nav-img"></div>
+    <div class="sentences">
+      <%= theme.sentences[Math.floor(Math.random() * theme.sentences.length)]%>
+    </div>
   </div>
 </header>

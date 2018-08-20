@@ -21,6 +21,12 @@ social:
   github: "https://github.com/markyong"
   weibo: "#"
 
+# awesome sentences
+sentences:
+- How goes the world width you?
+- 云里写诗，泥里生活，岁月里洒脱。
+- 时光荏苒，旦夕之间，略有遗憾，似白驹过隙，蹉跎自悟。
+
 # stylesheets loaded in the <head>
 stylesheets:
 - /lib/font-awesome/css/font-awesome.min.css

@@ -22,3 +22,19 @@ function initWater () {
   })
 }
 initWater()
+
+
+// mobile
+var menu = document.querySelector('.menu')
+var aside = document.getElementById("content-aside")
+document.onclick = function (e) {
+  aside.style.left = -252 + 'px'
+  e.stopPropagation()
+}
+menu.onclick = function (e) {
+  aside.style.left = 0
+  e.stopPropagation()
+}
+aside.onclick = function (e) {
+  e.stopPropagation()
+}

@@ -59,3 +59,5 @@ function handleActive(href) {
   })
   document.querySelector(".toc [href='"+ href +"']").classList.add('active')
 }
+
+document.querySelector('.menu').style.display = 'none'

@@ -1,5 +1,4 @@
 import inView from 'in-view'
-
 var isDown = true,
   oldY = 0,
   timer = 0,
@@ -15,7 +14,6 @@ document.addEventListener("scroll", function () {
   oldY = currentY
   bodyScrollTop = currentY
 })
-inView.offset(47)
 document.querySelectorAll('.toc-link').forEach(function (val) {
   var href = val.getAttribute('href')
   inView(href).on('exit', () => {
@@ -29,29 +27,13 @@ document.querySelectorAll('.toc-link').forEach(function (val) {
     }
   })
   val.onclick = function () {
-    animate(href)
     setTimeout(function () {
       handleActive(href)
-    }, 370)
+    }, 577)
     return false
   }
 })
-
-// 缓动动画
-function animate (el) {
-  targetTop = document.querySelector(el).offsetTop + 450 + 40
-  clearInterval(timer)
-  timer = setInterval(function () {
-    var step = (targetTop - bodyScrollTop) / 17
-    step = step > 0 ? Math.ceil(step) : Math.floor(step)
-    bodyScrollTop = bodyScrollTop + step
-    window.scrollTo(0, bodyScrollTop)
-    if (Math.abs(targetTop - bodyScrollTop) <= Math.abs(step)) {
-      window.scrollTo(0, targetTop)
-      clearInterval(timer)
-    }
-  }, 17)
-}
+var scroll = new SmoothScroll('a[href*="#"]')
 
 function handleActive(href) {
   document.querySelectorAll('.toc-link').forEach(el => {

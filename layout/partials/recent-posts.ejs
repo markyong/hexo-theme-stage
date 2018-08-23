@@ -24,13 +24,11 @@
         <% } else { %>
           <%- post.content %>
         <% }%>
-          <%- list_tags(post.tags, {
-            show_count: false,
-            class: 'tags-category'
-          }) %>
-          <a class="readmore" href="<%= config.root + post.path %>">
-            <%= __('readMore')%>
-          </a>
+          <div class="readmore">
+              <a href="<%= config.root + post.path %>">
+                  <%= __('readMore')%>
+              </a>
+          </div>
       </div>
     <% }) %>
   </div>

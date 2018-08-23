@@ -2,7 +2,7 @@
   <div id="tag-item">
     <h1><%= page.tag %></h1>
     <% page.posts.each(function (article) { %>
-      <div class="tag-item">
+      <div class="item">
         <h3>
           <time datetime="<%=date_xml(article.date)%>">
             <%=date(article.date)%>

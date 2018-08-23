@@ -1,8 +1,7 @@
-#tag-item
+#category, #tag-item, #archive
   width $stage-page-width
   background #fff
-  padding 7px
-  box-shadow 0px 0px 1px rgba(0, 0, 0, 0.1)
+  padding 7px 27px
   border-radius 1px
   margin-bottom 37px
   float left
@@ -14,22 +13,25 @@
     padding 2px 0;
     transform rotate(45deg)
     position absolute
-    background #41b883
+    background $stage-theme-color
     color #fff
     right -43px
     top 40px
     text-align center
   }
-.tag-item
+.item
   height 77px
   line-height 77px
+  border-bottom 1px dashed #e1e1e1
+  overflow hidden
   &:last-child {
     margin-bottom 37px
   }
   h3
-    border-bottom 1px dashed #ccc
-    a:hover {
-      color: #41b883
-    }
+    a
+      transition all 0.37s ease
+      &:hover {
+        color: $stage-theme-color
+      }
     time
       padding 0 17px 0 7px

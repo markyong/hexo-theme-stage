@@ -6,7 +6,7 @@
   float left
 .post-item
   border-bottom 1px dashed #e1e1e1
-  padding 17px 27px
+  padding 27px
   img
     display block
     max-width 100%
@@ -21,16 +21,19 @@
       padding-right 17px
   .readmore
     margin-left 1px
+    margin-top 17px
     font-weight 600
-    &:hover
+    a:hover
       color #41b883
   h3
     font-size 27px
     padding-bottom 7px
     font-weight 600
-    a:hover {
-      color: #41b883
-    }
+    a
+      transition color 0.37s ease
+      &:hover {
+        color: $stage-theme-color
+      }
   time
     display inline-block
   p
@@ -67,57 +70,6 @@
     padding-left 42px
   li
     line-height 1.7
-  .tags-category-list
-    padding-left 20px
-    font-size 12px
-    margin 14px 0
-    li
-      list-style none
-      padding 0
-  .tags-category-list-item
-    display inline-block
-    padding 2px 3px
-    background #f1f8ff
-    margin-right 24px
-    position relative
-    a
-      color #000
-      &:hover
-        color #41b883
-  .tags-category-list li:nth-child(even)
-    &::before
-      content: ''
-      display inline-block
-      border-right 20px solid #f1f8ff
-      border-bottom 20px solid rgba(0, 0, 0, 0)
-      position absolute
-      left -20px
-      top: 0px
-    &::after
-      content: ''
-      display inline-block
-      border-right 20px solid rgba(0, 0, 0, 0)
-      border-top 20px solid #f1f8ff
-      position absolute
-      right  -20px
-      top: 0px
-  .tags-category-list li:nth-child(odd)
-    &::before
-      content: ''
-      display inline-block
-      border-right 20px solid #f1f8ff
-      border-top 20px solid rgba(0, 0, 0, 0)
-      position absolute
-      left -20px
-      top: 0px
-    &::after
-      content: ''
-      display inline-block
-      border-right 20px solid rgba(0, 0, 0, 0)
-      border-bottom 20px solid #f1f8ff
-      position absolute
-      right  -20px
-      top: 0px
   .article-category-list li
     list-style none
     padding 0
@@ -137,7 +89,7 @@
       border-radius 50%
       position absolute
       left 0px
-      top 6px
+      top 7px
 //.post-content
 //  width 51%
 //  padding 20px

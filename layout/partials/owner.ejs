@@ -25,7 +25,7 @@
     <div class="social">
         <% for (var key in theme.social ) {%>
             <% if (theme.social[key]){%>
-              <a href="<%- url_for(theme.social[key]) %>" title="<%= key %>" class="fa fa-<%= key %>"></a>
+              <a href="<%- url_for(theme.social[key]) %>" title="<%= key %>" class="fa fa-<%= key %>" target="_blank"></a>
             <% } %>
         <% } %>
     </div>

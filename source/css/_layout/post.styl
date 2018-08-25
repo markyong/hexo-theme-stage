@@ -17,13 +17,13 @@
     position relative
     margin-right 17px
     a:hover
-      color #41b883
+      color $stage-theme-color
     &::before
       display inline-block
       content: ''
       width 11px
       height 11px
-      background #41b883
+      background $stage-theme-color
       border-radius 50%
       position absolute
       left 0px
@@ -51,6 +51,9 @@
   p
     line-height 2
     padding 7px 0
+    a
+      color $stage-theme-color
+      font-weight 600
   table
     width 100%
     border-collapse collapse
@@ -102,7 +105,7 @@
     a
       color #777
       &:hover
-        color #41b883
+        color $stage-theme-color
   .tags-category-list li:nth-child(even)
     &::before
       content: ''
@@ -186,4 +189,4 @@
       ol
         padding-left 10px
   .active
-    color: #41b883
+    color: $stage-theme-color

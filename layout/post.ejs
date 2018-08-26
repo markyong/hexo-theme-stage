@@ -2,7 +2,7 @@
   <article id="post">
     <h1><%=page.title%></h1>
     <div class="create">
-        <span>创建于</span>
+        <span><%= __('created')%></span>
         <% if (page.date) {%>
         <time datetime="<%= page.date.toJSON() %>">
             <%=date(page.date)%>

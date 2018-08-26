@@ -16,7 +16,7 @@
         <% } else { %>
         <!-- internal link -->
         <a href="<%=url_for(article.path)%>">
-          <%- truncate(strip_html(article.title), {length: 57, omission: '...'}) %>
+          <%= truncate(strip_html(article.title), {length: 57, omission: '...'}) || 'No Title'%>
         </a>
         <% } %>
         </h3>

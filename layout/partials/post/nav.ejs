@@ -6,7 +6,7 @@
             <% if (post.prev.title){ %>
             <%= post.prev.title %>
             <% } else { %>
-            (no title)
+            <%= __('noTitle') %>
             <% } %>
         </span>
         <strong class="article-nav-caption"><%= __('>') %></strong>
@@ -15,7 +15,12 @@
     <% if (post.next){ %>
     <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption"><%= __('<') %></strong>
-        <span class="article-nav-title"><%= post.next.title %></span>
+        <span class="article-nav-title">
+            <% if(post.next.title) { %>
+                <%= post.next.title %></span>
+            <% } else {%>
+              <%= __('noTitle') %>
+            <% } %>
     </a>
     <% } %>
 </nav>

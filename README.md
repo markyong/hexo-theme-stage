@@ -1,14 +1,25 @@
 # hexo-theme-stage
-舒适的Hexo主题
-## 使用
-### 安装
-`git clone git@github.com:markyong/hexo-theme-stage.git themes/stage`  
-修改根目录下`_config.yml`  
+一个清爽的、舒适的Hexo主题
+## 安装
+在Hexo根目录下
+```
+git clone git@github.com:markyong/hexo-theme-stage.git themes/stage
+```
+在Hexo根目录下，设置站点配置文件`_config.yml`
 ```
 theme: stage
 ```
-### 主题配置
-themes文件夹下`_config.yml`
+## 配置
+### 语言配置
+修改站点配置文件`_config.yml`，目前只支持英文和简体中文
+```
+language: en
+# language: zh-CN
+```
+**其他根据官方文档配置**
+## 主题配置
+### 基本配置
+themes文件夹下，stage文件夹里`_config.yml`
 ```
 # 在header显示的句子可以在这里添加，主题在页面刷新时会随机显示一个
 sentences:

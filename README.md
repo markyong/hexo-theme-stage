@@ -17,8 +17,7 @@ language: en
 # language: zh-CN
 ```
 **其他根据官方文档配置**
-## 主题配置
-### 基本配置
+### 主题配置
 themes文件夹下，stage文件夹里`_config.yml`
 ```
 # 在header显示的句子可以在这里添加，主题在页面刷新时会随机显示一个

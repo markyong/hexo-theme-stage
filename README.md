@@ -9,6 +9,11 @@ git clone git@github.com:markyong/hexo-theme-stage.git themes/stage
 ```
 theme: stage
 ```
+## 更新 
+在主题stage文件夹下
+```
+git pull
+```
 ## 配置
 ### 语言配置
 修改站点配置文件`_config.yml`，目前只支持英文和简体中文

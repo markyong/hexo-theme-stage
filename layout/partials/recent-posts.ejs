@@ -1,35 +1,35 @@
 <% if (page.posts.length > 0) { %>
-  <div id="recent-posts">
-    <% page.posts.sort('date', -1).limit(10).each(function (post) { %>
-      <div class="post-item">
-          <h1>
-            <a href="<%= config.root + post.path %>">
-              <%- truncate(strip_html(post.title), {length: 47, omission: '...'}) %>
-            </a>
-          </h1>
-          <div class="create">
-              <span><%= __('created')%></span>
-              <% if (post.date) {%>
-              <time datetime="<%= post.date.toJSON() %>">
-                  <%=date(post.date)%>
-              </time>
-              <% } %>
-              <%- list_categories(post.categories, {
-                  show_count: false,
-                  class: 'article-category'
-              }) %>
-          </div>
-        <% if(post.excerpt) { %>
-          <%- post.excerpt %>
-        <% } else { %>
-          <%- post.content %>
-        <% }%>
-          <div class="readmore">
-              <a href="<%= config.root + post.path %>">
-                  <%= __('readMore')%>
-              </a>
-          </div>
-      </div>
-    <% }) %>
-  </div>
+    <div id="recent-posts">
+        <% page.posts.sort('date', -1).limit(10).each(function (post) { %>
+            <div class="post-item">
+                <h1>
+                    <a href="<%= config.root + post.path %>">
+                        <%- truncate(strip_html(post.title), {length: 47, omission: '...'}) %>
+                    </a>
+                </h1>
+                <div class="create">
+                    <span><%= __('created') %></span>
+                    <% if (post.date) { %>
+                        <time datetime="<%= post.date.toJSON() %>">
+                            <%= date(post.date) %>
+                        </time>
+                    <% } %>
+                    <%- list_categories(post.categories, {
+                        show_count: false,
+                        class: 'article-category'
+                    }) %>
+                </div>
+                <% if(post.excerpt) { %>
+                    <%- post.excerpt %>
+                <% } else { %>
+                    <%- post.content %>
+                <% } %>
+                <div class="readmore">
+                    <a href="<%= config.root + post.path %>">
+                        <%= __('readMore') %>
+                    </a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 <% } %>

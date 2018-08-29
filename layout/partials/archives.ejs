@@ -1,11 +1,11 @@
 <%
-var acchivesList = list_archives({ show_count: false })
+var acchivesList = list_archives({show_count: false})
 %>
 <aside id="acchives">
-    <h2><%= __('archives')%></h2>
+    <h2><%= __('archives') %></h2>
     <% if (acchivesList) { %>
-    <%-acchivesList%>
+    <%- acchivesList %>
     <% } else { %>
-    <p>None.</p>
+        <p>None.</p>
     <% } %>
 </aside>

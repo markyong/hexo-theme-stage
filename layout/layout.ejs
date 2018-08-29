@@ -1,20 +1,20 @@
-<%-partial('partials/head') %>
+<%- partial('partials/head') %>
 <body>
 <%- partial('partials/header') %>
 <div id="content-outer">
-  <div id="content-inner">
-    <%- body %>
-  </div>
+    <div id="content-inner">
+        <%- body %>
+    </div>
 </div>
 <%- partial('partials/footer') %>
 <script src="/lib/js/waterrippleeffect.min.js"></script>
 <script src="/js/header-bg.main.js"></script>
-<% if (!is_post()) {%>
-  <script src="/lib/js/cav.js"></script>
-  <script src="/js/avatar-bg.main.js"></script>
-<%} else {%>
-  <script src="/lib/js/smooth-scroll.min.js"></script>
-  <script src="/js/toc.main.js"></script>
-<%}%>
+<% if (!is_post()) { %>
+    <script src="/lib/js/cav.js"></script>
+    <script src="/js/avatar-bg.main.js"></script>
+<% } else { %>
+    <script src="/lib/js/smooth-scroll.min.js"></script>
+    <script src="/js/toc.main.js"></script>
+<% } %>
 </body>
 </html>

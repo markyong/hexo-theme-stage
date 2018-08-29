@@ -1,21 +1,21 @@
 <div class="clearfix">
-  <div id="tag-item">
-    <h1><%= page.tag %></h1>
-    <% page.posts.each(function (article) { %>
-      <div class="item">
-        <h3>
-          <time datetime="<%=date_xml(article.date)%>">
-            <%=date(article.date)%>
-          </time>
-          <a href="<%=url_for(article.path)%>">
-            <%- truncate(strip_html(article.title), {length: 57, omission: '...'}) %>
-          </a>
-        </h3>
-      </div>
-    <% }) %>
-  </div>
-  <%- partial('partials/content-aside') %>
+    <div id="tag-item">
+        <h1><%= page.tag %></h1>
+        <% page.posts.each(function (article) { %>
+        <div class="item">
+            <h3>
+                <time datetime="<%= date_xml(article.date) %>">
+                    <%= date(article.date) %>
+                </time>
+                <a href="<%= url_for(article.path) %>">
+                    <%- truncate(strip_html(article.title), {length: 57, omission: '...'}) %>
+                </a>
+            </h3>
+        </div>
+        <% }) %>
+    </div>
+    <%- partial('partials/content-aside') %>
 </div>
 <div id="tag-paginator" class="clearfix">
-  <%-paginator({prev_text: '&laquo; ' + __('prev'), next_text: __('next') + ' &raquo;'})%>
+    <%- paginator({prev_text: '&laquo; ' + __('prev'), next_text: __('next') + ' &raquo;'}) %>
 </div>

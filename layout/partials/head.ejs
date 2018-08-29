@@ -1,27 +1,27 @@
 <%
-  var pageTitle = page.title || config.subtitle || ''
-  if (is_home()) pageTitle = ''
-  if (is_archive()) pageTitle = 'Archives'
-  if (is_tag()) pageTitle = 'Tag: ' + page.tag
-  if (is_category()) pageTitle = 'Category: ' + page.category
-  if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
-  if (is_year()) pageTitle += ': ' + page.year
-  pageTitle
-    ? pageTitle += ' | ' + config.title
-    : pageTitle = config.title
+var pageTitle = page.title || config.subtitle || ''
+if (is_home()) pageTitle = ''
+if (is_archive()) pageTitle = 'Archives'
+if (is_tag()) pageTitle = 'Tag: ' + page.tag
+if (is_category()) pageTitle = 'Category: ' + page.category
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
+if (is_year()) pageTitle += ': ' + page.year
+pageTitle
+        ? pageTitle += ' | ' + config.title
+        : pageTitle = config.title
 %>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title><%= pageTitle %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <% if (theme.favicon) { %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <% theme.stylesheets.forEach (function (url) { %>
-      <link rel="stylesheet" href="<%= url %>">
-    <% }) %>
-  <% } %>
+    <meta charset="UTF-8">
+    <title><%= pageTitle %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <% if (theme.favicon) { %>
+        <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+        <% theme.stylesheets.forEach (function (url) { %>
+            <link rel="stylesheet" href="<%= url %>">
+        <% }) %>
+    <% } %>
 </head>

@@ -1,14 +1,14 @@
 <header id="header">
-  <div class="menu">
-    <i class="fa fa-bars"></i>
-  </div>
-  <div class="header-main">
-    <h1><a href="/"><%= config.title %></a></h1>
-  </div>
-  <div id="nav">
-    <div class="nav-img" id="nav-img"></div>
-    <div class="sentences">
-      <%= theme.sentences[Math.floor(Math.random() * theme.sentences.length)]%>
+    <div class="menu">
+        <i class="fa fa-bars"></i>
     </div>
-  </div>
+    <div class="header-main">
+        <h1><a href="/"><%= config.title %></a></h1>
+    </div>
+    <div id="nav">
+        <div class="nav-img" id="nav-img"></div>
+        <div class="sentences">
+            <%= theme.sentences[Math.floor(Math.random() * theme.sentences.length)] %>
+        </div>
+    </div>
 </header>

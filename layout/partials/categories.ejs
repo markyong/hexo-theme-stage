@@ -1,11 +1,11 @@
 <%
-  var categoriesList = list_categories({ show_count: false })
+var categoriesList = list_categories({show_count: false})
 %>
 <aside id="categories">
-  <h2><%= __('categories')%></h2>
-  <% if (categoriesList) { %>
-    <%-categoriesList%>
-  <% } else { %>
-    <p>None.</p>
-  <% } %>
+    <h2><%= __('categories') %></h2>
+    <% if (categoriesList) { %>
+        <%- categoriesList %>
+    <% } else { %>
+        <p>None.</p>
+    <% } %>
 </aside>

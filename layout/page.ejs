@@ -1,7 +1,12 @@
 <div class="clearfix">
     <article id="page">
-        <h1><%= page.title %></h1>
-        <%- page.content %>
+        <div class="page-content">
+            <h1><%= page.title %></h1>
+            <%- page.content %>
+        </div>
+        <% if (theme.valine.enable && theme.valine.appid && theme.valine.appkey) { %>
+            <%- partial('partials/valine') %>
+        <% } %>
     </article>
     <%- partial('partials/content-aside') %>
 </div>

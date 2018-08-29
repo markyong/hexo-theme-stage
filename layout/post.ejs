@@ -22,6 +22,9 @@
         </div>
         <div class="bottom-line"></div>
         <%- partial('partials/post/nav', {post: page}) %>
+        <% if (theme.valine.enable && theme.valine.appid && theme.valine.appkey) { %>
+            <%- partial('partials/valine') %>
+        <% } %>
     </article>
     <div id="toc">
         <% if(toc(page.content)) { %>
@@ -32,4 +35,3 @@
         <% } %>
     </div>
 </div>
-<%- paginator() %>

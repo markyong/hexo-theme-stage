@@ -19,6 +19,17 @@ sentences:
 - 云里写诗，泥里生活，岁月里洒脱。
 - 时光荏苒，旦夕之间，略有遗憾，似白驹过隙，蹉跎自悟。
 
+# valine https://github.com/xCss/Valine
+
+valine:
+  enable: false
+  appid: # your leancloud application appid
+  appkey: # your leancloud application key
+  notify: false # mail notifier
+  avatar: mm #avatar style：''/mm/identicon/monsterid/wavatar/retro/hide
+  verify: false # Verification code
+  placeholder: Stage,show
+
 # stylesheets loaded in the <head>
 stylesheets:
 - /lib/font-awesome/css/font-awesome.min.css

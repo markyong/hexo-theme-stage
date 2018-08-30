@@ -1,11 +1,16 @@
 <%
 var pageTitle = page.title || config.subtitle || ''
+var description = config.description
+var keywords = config.keywords
 if (is_home()) pageTitle = ''
 if (is_archive()) pageTitle = 'Archives'
 if (is_tag()) pageTitle = 'Tag: ' + page.tag
 if (is_category()) pageTitle = 'Category: ' + page.category
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 if (is_year()) pageTitle += ': ' + page.year
+if (is_post()) {
+  description = truncate(strip_html(page.content), {length: 317, omission: '...'})
+}
 pageTitle
         ? pageTitle += ' | ' + config.title
         : pageTitle = config.title
@@ -16,6 +21,8 @@ pageTitle
     <meta charset="UTF-8">
     <title><%= pageTitle %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="description" content="<%= description %>">
     <% if (theme.favicon) { %>
         <link rel="icon" href="<%- theme.favicon %>">
     <% } %>

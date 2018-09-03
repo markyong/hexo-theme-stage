@@ -1,5 +1,5 @@
 # hexo-theme-stage
-一个清爽的、舒适的Hexo主题
+A refreshing and comfortable theme for Hexo.
 ## 安装
 在Hexo根目录下
 ```
@@ -16,7 +16,7 @@ git pull
 ```
 ## 配置
 ### 语言配置
-修改站点配置文件`_config.yml`，目前只支持英文和简体中文
+修改站点配置文件`_config.yml`
 ```
 language: en
 # language: zh-CN

@@ -12,6 +12,10 @@ avatar: /images/avatar.jpg
 social:
   github: "https://github.com/markyong"
   weibo: "#"
+# about and comment
+about:
+  enable: true
+  comment: true
 
 # awesome sentences
 sentences:

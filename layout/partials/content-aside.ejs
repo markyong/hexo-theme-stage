@@ -2,11 +2,13 @@
     <div class="content-aside-owner">
         <%- partial('owner') %>
     </div>
-    <div class="content-aside-about">
-        <h2>
-            <a href="/about"><%= __('about') %></a>
-        </h2>
-    </div>
+    <% if (theme.about.enable) { %>
+        <div class="content-aside-about">
+            <h2>
+                <a href="/about"><%= __('about') %></a>
+            </h2>
+        </div>
+    <% } %>
     <div class="content-aside-tags">
         <h2>
             <a href="/tags">
